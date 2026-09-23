@@ -1,0 +1,25 @@
+/* Fibonacci Sequence
+Write a C program to input the number of terms and display the Fibonacci sequence using a loop. */
+
+#include <stdio.h>
+
+int main()
+{
+    int n, first = 0, second = 1, next, i;
+
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Sequence:\n");
+
+    for (i = 1; i <= n; i++)
+    {
+        printf("%d ", first);
+
+        next = first + second;
+        first = second;
+        second = next;
+    }
+
+    return 0;
+}
